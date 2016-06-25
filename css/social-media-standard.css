@@ -1,0 +1,114 @@
+/* Social Media Standard style */
+/* Colors */
+/* line 5, ../scss/social-media-standard.scss */
+#block-simplesharer-simplesharer {
+  display: block;
+}
+
+/* line 9, ../scss/social-media-standard.scss */
+#simplesharer .simplesharer-buttonlist {
+  margin: 1em 0 0 0;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  list-style-type: none;
+}
+/* line 14, ../scss/social-media-standard.scss */
+#simplesharer .simplesharer-buttonlist li {
+  margin: 0;
+  padding: 0;
+}
+/* line 17, ../scss/social-media-standard.scss */
+#simplesharer .simplesharer-buttonlist li a {
+  width: 5vw;
+  height: 2vw;
+  text-align: center;
+  background-color: #B25655;
+  font-size: 1.22vw;
+  line-height: 1.22vw;
+  padding: 0.25em;
+  color: #ffffff;
+}
+/* line 26, ../scss/social-media-standard.scss */
+#simplesharer .simplesharer-buttonlist li a i {
+  margin-right: 0.5em;
+}
+/* line 30, ../scss/social-media-standard.scss */
+#simplesharer .simplesharer-buttonlist li.simplesharer-facebook-button a {
+  background-color: #3b5998;
+}
+/* line 32, ../scss/social-media-standard.scss */
+#simplesharer .simplesharer-buttonlist li.simplesharer-facebook-button a:hover {
+  background-color: #4c70ba;
+}
+/* line 36, ../scss/social-media-standard.scss */
+#simplesharer .simplesharer-buttonlist li.simplesharer-twitter-button a {
+  background-color: #55acce;
+}
+/* line 38, ../scss/social-media-standard.scss */
+#simplesharer .simplesharer-buttonlist li.simplesharer-twitter-button a:hover {
+  background-color: #7dbfd9;
+}
+/* line 42, ../scss/social-media-standard.scss */
+#simplesharer .simplesharer-buttonlist li.simplesharer-pinterest-button a {
+  background-color: #cc2127;
+}
+/* line 44, ../scss/social-media-standard.scss */
+#simplesharer .simplesharer-buttonlist li.simplesharer-pinterest-button a:hover {
+  background-color: #e04046;
+}
+/* line 48, ../scss/social-media-standard.scss */
+#simplesharer .simplesharer-buttonlist li.simplesharer-linkedin-button a {
+  background-color: #00a0dc;
+}
+/* line 50, ../scss/social-media-standard.scss */
+#simplesharer .simplesharer-buttonlist li.simplesharer-linkedin-button a:hover {
+  background-color: #10beff;
+}
+/* line 54, ../scss/social-media-standard.scss */
+#simplesharer .simplesharer-buttonlist li.simplesharer-tumblr-button a {
+  background-color: #35465c;
+}
+/* line 56, ../scss/social-media-standard.scss */
+#simplesharer .simplesharer-buttonlist li.simplesharer-tumblr-button a:hover {
+  background-color: #485f7c;
+}
+/* line 60, ../scss/social-media-standard.scss */
+#simplesharer .simplesharer-buttonlist li.simplesharer-email-button a {
+  background-color: #333333;
+}
+/* line 62, ../scss/social-media-standard.scss */
+#simplesharer .simplesharer-buttonlist li.simplesharer-email-button a:hover {
+  background-color: #4d4d4d;
+}
+
+/* line 70, ../scss/social-media-standard.scss */
+html.no-cssvwunit #simplesharer .simplesharer-buttonlist li {
+  height: 30px;
+  width: 50px;
+}
+/* line 73, ../scss/social-media-standard.scss */
+html.no-cssvwunit #simplesharer .simplesharer-buttonlist li a {
+  font-size: 10px;
+  width: 50px;
+  height: 30px;
+}
+/* line 77, ../scss/social-media-standard.scss */
+html.no-cssvwunit #simplesharer .simplesharer-buttonlist li a i {
+  font-size: 15px;
+}
+
+/* line 84, ../scss/social-media-standard.scss */
+html.no-flexbox #simplesharer {
+  display: table;
+  margin-top: 5px;
+}
+/* line 87, ../scss/social-media-standard.scss */
+html.no-flexbox #simplesharer .simplesharer-buttonlist {
+  display: table-row;
+}
+/* line 89, ../scss/social-media-standard.scss */
+html.no-flexbox #simplesharer .simplesharer-buttonlist li {
+  display: table-cell;
+}

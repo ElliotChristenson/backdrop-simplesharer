@@ -1,0 +1,9 @@
+<?php
+/**
+ * @file
+ * All functions for the Social SimpleSharer module.
+ */
+
+module_load_include('inc', 'simplesharer', 'includes/simplesharer.libraries');
+module_load_include('inc', 'simplesharer', 'includes/simplesharer.block');
+module_load_include('inc', 'simplesharer', 'includes/simplesharer.theme');

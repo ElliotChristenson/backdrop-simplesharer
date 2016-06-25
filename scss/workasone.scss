@@ -1,0 +1,112 @@
+/* Work As One style */
+
+@import "./mixins.scss";
+
+@media only screen
+  and (max-width: 739px) {
+  .block-simplesharer h2.block-title {
+    font-size: 4vw;
+  }
+  #simplesharer .simplesharer-buttonlist li a {
+    font-size: 4.5vw;
+    height: 6vw;
+    line-height: 6vw;
+    width: 6vw;
+    i {
+      margin: 0;
+    }
+    span {
+      display: none;
+    }
+  }
+}
+@media only screen
+  and (min-width: 750px) {
+  .block-simplesharer h2.block-title {
+    font-size: 2em;
+  }
+  #simplesharer .simplesharer-buttonlist li a {
+    font-size: 1.5vw;
+    height: 2vw;
+    line-height: 2vw;
+    width: 8.5vw;
+    i {
+      margin: 0;
+    }
+    span {
+      display: inline;
+    }
+  }
+}
+.block-simplesharer h2.block-title {
+  color: $base-color;
+  text-align: center;
+}
+
+#simplesharer .simplesharer-buttonlist {
+  margin: 1em 0 0 0;
+  @include display-flex;
+  @include justify-content(space-between);
+  list-style-type: none;
+  li {
+    margin: 0;
+    padding: 0;
+    a {
+      display: block;
+      text-align: center;
+      background-color: $base-color;
+      padding: 0.25em;
+      color: $background-color;
+      &:hover {
+        color: $background-color;
+      }
+    }
+    &.simplesharer-facebook-button-item a:hover {
+      background-color: $facebook-color;
+    }
+    &.simplesharer-twitter-button-item a:hover {
+      background-color: $twitter-color;
+    }
+    &.simplesharer-pinterest-button-item a:hover {
+      background-color: $pinterest-color;
+    }
+    &.simplesharer-linkedin-button-item a:hover {
+      background-color: $linkedin-color;
+    }
+    &.simplesharer-tumblr-button-item a:hover {
+      background-color: $tumblr-color;
+    }
+    &.simplesharer-reddit-button-item a:hover {
+      background-color: $reddit-color;
+    }
+    &.simplesharer-email-button-item a:hover {
+      background-color: #333333;
+    }
+  }
+}
+
+html.no-cssvwunit #simplesharer {
+  .simplesharer-buttonlist li {
+    height: 30px;
+    width: 50px;
+    a {
+      font-size: 10px;
+      width: 50px;
+      height: 30px;
+      i {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+html.no-flexbox #simplesharer {
+  display: table;
+  margin-top: 5px;
+  .simplesharer-buttonlist {
+    display: table-row;
+    li {
+      display: table-cell;
+    }
+  }
+}

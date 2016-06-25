@@ -1,0 +1,75 @@
+/* Ideas By Elliot style */
+
+@import "./mixins.scss";
+
+#block-simplesharer-simplesharer {
+  display: block;
+}
+
+#simplesharer .simplesharer-buttonlist {
+  margin: 1em 0 0 0;
+  @include display-flex;
+  @include justify-content(space-between);
+  list-style-type: none;
+  li {
+    margin: 0;
+    padding: 0;
+    a {
+      width: 5vw;
+      height: 4vw;
+      text-align: center;
+      @include sassy-button("simple", 5px, 1.2vw, $base-color, false, $background-color, "raised", false);
+      @include sassy-button-structure(5px, 1.22vw, 0.4em);
+      &:hover {
+      }
+      i {
+        font-size: 2.5vw;
+        display: block;
+      }
+    }
+    &.simplesharer-facebook-button a:hover {
+      @include sassy-button-gradient("simple", $facebook-color, false, $background-color, "inset", false);
+    }
+    &.simplesharer-twitter-button a:hover {
+      @include sassy-button-gradient("simple", $twitter-color, false, $background-color, "inset", false);
+    }
+    &.simplesharer-pinterest-button a:hover {
+      @include sassy-button-gradient("simple", $pinterest-color, false, $background-color, "inset", false);
+    }
+    &.simplesharer-linkedin-button a:hover {
+      @include sassy-button-gradient("simple", $linkedin-color, false, $background-color, "inset", false);
+    }
+    &.simplesharer-tumblr-button a:hover {
+      @include sassy-button-gradient("simple", $tumblr-color, false, $background-color, "inset", false);
+    }
+    &.simplesharer-email-button a:hover {
+      @include sassy-button-gradient("simple", #333333, false, $background-color, "inset", false);
+    }
+  }
+}
+
+html.no-cssvwunit #simplesharer {
+  .simplesharer-buttonlist li {
+    height: 30px;
+    width: 50px;
+    a {
+      font-size: 10px;
+      width: 50px;
+      height: 30px;
+      i {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+html.no-flexbox #simplesharer {
+  display: table;
+  margin-top: 5px;
+  .simplesharer-buttonlist {
+    display: table-row;
+    li {
+      display: table-cell;
+    }
+  }
+}

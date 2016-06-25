@@ -1,0 +1,93 @@
+/* Social Media Standard style */
+
+@import "./mixins.scss";
+
+#block-simplesharer-simplesharer {
+  display: block;
+}
+
+#simplesharer .simplesharer-buttonlist {
+  margin: 1em 0 0 0;
+  @include display-flex;
+  @include justify-content(space-between);
+  list-style-type: none;
+  li {
+    margin: 0;
+    padding: 0;
+    a {
+      width: 5vw;
+      height: 2vw;
+      text-align: center;
+      background-color: $base-color;
+      font-size: 1.22vw;
+      line-height: 1.22vw;
+      padding: 0.25em;
+      color: $background-color;
+      i {
+        margin-right: 0.5em;
+      }
+    }
+    &.simplesharer-facebook-button a {
+      background-color: $facebook-color;
+      &:hover {
+        background-color: lighten($facebook-color, 10%);
+      }
+    }
+    &.simplesharer-twitter-button a {
+      background-color: $twitter-color;
+      &:hover {
+        background-color: lighten($twitter-color, 10%);
+      }
+    }
+    &.simplesharer-pinterest-button a {
+      background-color: $pinterest-color;
+      &:hover {
+        background-color: lighten($pinterest-color, 10%);
+      }
+    }
+    &.simplesharer-linkedin-button a {
+      background-color: $linkedin-color;
+      &:hover {
+        background-color: lighten($linkedin-color, 10%);
+      }
+    }
+    &.simplesharer-tumblr-button a {
+      background-color: $tumblr-color;
+      &:hover {
+        background-color: lighten($tumblr-color, 10%);
+      }
+    }
+    &.simplesharer-email-button a {
+      background-color: #333333;
+      &:hover {
+        background-color: lighten(#333333, 10%);
+      }
+    }
+  }
+}
+
+html.no-cssvwunit #simplesharer {
+  .simplesharer-buttonlist li {
+    height: 30px;
+    width: 50px;
+    a {
+      font-size: 10px;
+      width: 50px;
+      height: 30px;
+      i {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+html.no-flexbox #simplesharer {
+  display: table;
+  margin-top: 5px;
+  .simplesharer-buttonlist {
+    display: table-row;
+    li {
+      display: table-cell;
+    }
+  }
+}

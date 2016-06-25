@@ -1,0 +1,6 @@
+name = Social SimpleSharer
+description = A module to create a block containing social sharing buttons
+package = Sharing
+backdrop = 1.x
+type = module
+dependencies[] = libraries
