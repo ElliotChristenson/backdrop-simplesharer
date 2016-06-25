@@ -25,11 +25,12 @@ blocking at the browser level.
 IF this module doesn't meet your needs, you should check out the
 "ShareThis" Module
 https://www.drupal.org/project/sharethis
+https://backdropcms.org/project/sharethis
 
 That module has more sharing options, and due to its usage of Javascript can
 dynamically show click counters.
 
-For a full description of this module, visit the project page:
+This module is available in Backdrop 1.x and Drupal 7.x variants
 https://www.drupal.org/project/simplesharer
 
 To submit bug reports and feature suggestions, or to track changes:
@@ -40,25 +41,27 @@ https://www.drupal.org/project/issues/
 Right now, this module requires either Font Awesome Icons
 or the Foundation Icon Font Set to work properly.
 
-Font Awesome is easier as it's accessible using the Font Awesome Icons Module:
-
-- Font Awesome Icons https://www.drupal.org/project/fontawesome
-
 Font Awesome Requires:
 
-- Libraries https://drupal.org/project/libraries
+- Drupal 7.x Libraries https://drupal.org/project/libraries
+- Backdrop 1.x Libraries https://backdropcms.org/project/libraries
 - Font Awesome http://fortawesome.github.com/Font-Awesome/
 
 ##RECOMMENDED MODULES##
 
-Currently, no other modules are recommended, but I am looking to move Font
-Awesome from REQUIREMENTS to RECOMMENDED MODULES
+Currently, no other modules are recommended
 
 ##INSTALLATION##
 
+###Drupal 7.x###
 Install as you would normally install a contributed Drupal module. See:
    https://drupal.org/documentation/install/modules-themes/modules-7
    for further information.
+
+###Backdrop 1.x###
+Install as you would normally install a contributed Backdrop module. See:
+   https://backdropcms.org/guide/modules
+   for further information
 
 ##CONFIGURATION##
 
