@@ -9,8 +9,10 @@
 #simplesharer .simplesharer-buttonlist {
   margin: 1em 0 0 0;
   display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   list-style-type: none;
 }
