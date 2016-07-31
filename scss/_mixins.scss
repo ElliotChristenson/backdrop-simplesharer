@@ -1,0 +1,23 @@
+
+/* Colors */
+
+$facebook-color: #3b5998;
+$twitter-color: #55acce;
+$linkedin-color: #00a0dc;
+$pinterest-color: #cc2127;
+$tumblr-color: #35465c;
+$reddit-color: #ff4500;
+
+$facebook-icon: "\f09a";
+$twitter-icon: "\f099";
+$linkedin-icon: "\f0e1";
+$pinterest-icon: "\f0d2";
+$tumblr-icon: "\f173";
+$reddit-icon: "\f1a1";
+
+@mixin gradient-background ($background-color: #666666) {
+  $lighter-background-color: lighten($background-color, 15%);
+  $darker-background-color: darken($background-color, 15%);
+  background: linear-gradient(to bottom, $lighter-background-color 0%,$background-color 40%,$darker-background-color 100%);
+  background-color: $background-color;
+}

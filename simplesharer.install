@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * Implements hook_uninstall().
+ */
+function simplesharer_uninstall() {
+  variable_del('simplesharer_style');
+  variable_del('simplesharer_basecolor');
+  variable_del('simplesharer_linkcolor');
+  variable_del('simplesharer_library');
+  variable_del('simplesharer_facebook');
+  variable_del('simplesharer_twitter');
+  variable_del('simplesharer_pinterest');
+  variable_del('simplesharer_linkedin');
+  variable_del('simplesharer_tumblr');
+  variable_del('simplesharer_reddit');
+  variable_del('simplesharer_email');
+  variable_del('simplesharer_small_library');
+  variable_del('simplesharer_small_facebook');
+  variable_del('simplesharer_small_twitter');
+  variable_del('simplesharer_small_pinterest');
+  variable_del('simplesharer_small_linkedin');
+  variable_del('simplesharer_small_tumblr');
+  variable_del('simplesharer_small_reddit');
+  variable_del('simplesharer_small_email');
+}

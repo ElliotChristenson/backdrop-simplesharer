@@ -1,5 +1,8 @@
 <?php
 
+define('DEFAULT_BASECOLOR', '#B25655');
+define('DEFAULT_LINKCOLOR', '#FFFFFF');
+
 /**
  * Implements hook_theme().
  */
@@ -16,8 +19,20 @@ function simplesharer_theme() {
       'template' => 'simplesharer-symbol-button',
       'path' => $module_path . '/templates',
     ),
+    'simplesharer_color_css' => array(
+      'variables' => array(
+        'simplesharer_basecolor' => NULL,
+        'simplesharer_linkcolor' => NULL,
+        'simplesharer_topcolor' => NULL,
+        'simplesharer_bottomcolor' => NULL,
+        'simplesharer_shadowcolor' => NULL,
+      ),
+      'template' => 'simplesharer-color-css',
+      'path' => $module_path . '/templates',
+    ),
     'simplesharer' => array(
       'variables' => array(
+        'simplesharer_color_css' => NULL,
         'simplesharer_facebook' => NULL,
         'simplesharer_twitter' => NULL,
         'simplesharer_pinterest' => NULL,
@@ -56,6 +71,21 @@ function simplesharer_theme() {
 }
 
 /**
+ * Custom function to change the level of the color
+ *
+ * @return string
+ *
+ *   returns a CSS hex code
+ */
+ function simplesharer_colorlevel($color,$level) {
+   $red = dechex( (int) (hexdec(substr($color,1,2))) * $level);
+   $green = dechex( (int) (hexdec(substr($color,3,2))) * $level);
+   $blue = dechex( (int) (hexdec(substr($color,5,2))) * $level);
+   $newcolor = "#".$red.$green.$blue;
+   return $newcolor;
+ }
+
+/**
  * Custom function to assemble renderable array for block content.
  *
  * @return array
@@ -65,13 +95,29 @@ function simplesharer_theme() {
 function simplesharer_content() {
   $block = array();
   $icon_library = simplesharer_iconlibrary('simplesharer');
+  $icon_library = isset($icon_library) ? $icon_library : 'none';
   $full_url = backdrop_encode_path($GLOBALS['base_url'] . request_uri());
   $logo = backdrop_encode_path(theme_get_setting('logo'));
   $site_name = variable_get('site_name');
   $title = rawurlencode($site_name . ' : ' . backdrop_get_title());
 
+  $large_style = variable_get('simplesharer_style');
+  $large_style = isset($large_style) ? $large_style : 'social-media-standard';
+
+  $basecolor = variable_get('simplesharer_basecolor');
+  $basecolor = isset($basecolor) ? $basecolor : DEFAULT_BASECOLOR;
+  $basecolor = variable_get('simplesharer_basecolor');
+  $basecolor = isset($basecolor) ? $basecolor : DEFAULT_BASECOLOR;
+  $linkcolor = variable_get('simplesharer_linkcolor');
+  $linkcolor = isset ($linkcolor) ? $linkcolor : DEFAULT_LINKCOLOR;
+  $topcolor = simplesharer_colorlevel($basecolor,1.3);
+  $bottomcolor = simplesharer_colorlevel($basecolor,0.7);
+  $shadowcolor = simplesharer_colorlevel($basecolor,0.5);
+
   $facebook = variable_get('simplesharer_facebook');
+  $facebook = isset($facebook) ? $facebook : TRUE;
   $twitter = variable_get('simplesharer_twitter');
+  $twitter = isset($twitter) ? $twitter : TRUE;
   $pinterest = variable_get('simplesharer_pinterest');
   $linkedin = variable_get('simplesharer_linkedin');
   $tumblr = variable_get('simplesharer_tumblr');
@@ -84,8 +130,19 @@ function simplesharer_content() {
   $tumblr_button = NULL;
   $reddit_button = NULL;
   $email_button = NULL;
+  $color_css = NULL;
 
   $markup_content = '';
+
+  if ($basecolor && $linkcolor && $topcolor && $bottomcolor && $shadowcolor && $large_style != 'none') {
+    $color_css = theme('simplesharer_color_css', array(
+      'simplesharer_basecolor'           => $basecolor,
+      'simplesharer_linkcolor'           => $linkcolor,
+      'simplesharer_topcolor'            => $topcolor,
+      'simplesharer_bottomcolor'         => $bottomcolor,
+      'simplesharer_shadowcolor'         => $shadowcolor,
+    ));
+  }
   if ($facebook) {
     $facebook_button = theme('simplesharer_symbol_button', array(
       'iconlibrary'         => $icon_library,
@@ -166,6 +223,7 @@ function simplesharer_content() {
     ));
   }
   $markup_content = theme('simplesharer', array(
+    'simplesharer_color_css'         => $color_css,
     'simplesharer_facebook_button'   => $facebook_button,
     'simplesharer_twitter_button'    => $twitter_button,
     'simplesharer_pinterest_button'  => $pinterest_button,
@@ -183,7 +241,6 @@ function simplesharer_content() {
     ),
   );
 
-  $large_style = variable_get('simplesharer_style');
   if ((isset($large_style)) && ($large_style != 'none')) {
     $block['content']['#attached']['css'][] = backdrop_get_path('module', 'simplesharer') .
     '/css/' . $large_style . '.css';
@@ -205,13 +262,13 @@ function simplesharer_small_content() {
   $logo = backdrop_encode_path(theme_get_setting('logo'));
   $title = rawurlencode('Ideas By Elliot : ' . backdrop_get_title());
 
-  $facebook = variable_get('simplesharer_small_facebook');
-  $twitter = variable_get('simplesharer_small_twitter');
-  $pinterest = variable_get('simplesharer_small_pinterest');
-  $linkedin = variable_get('simplesharer_small_linkedin');
-  $tumblr = variable_get('simplesharer_small_tumblr');
-  $reddit = variable_get('simplesharer_small_reddit');
-  $email = variable_get('simplesharer_small_email');
+  $facebook = variable_get('simplesharer_small_facebook') ?: TRUE;
+  $twitter = variable_get('simplesharer_small_twitter') ?: TRUE;
+  $pinterest = variable_get('simplesharer_small_pinterest') ?: FALSE;
+  $linkedin = variable_get('simplesharer_small_linkedin') ?: FALSE;
+  $tumblr = variable_get('simplesharer_small_tumblr') ?: FALSE;
+  $reddit = variable_get('simplesharer_small_reddit') ?: FALSE;
+  $email = variable_get('simplesharer_small_email') ?: FALSE;
   $facebook_button = NULL;
   $twitter_button = NULL;
   $pinterest_button = NULL;

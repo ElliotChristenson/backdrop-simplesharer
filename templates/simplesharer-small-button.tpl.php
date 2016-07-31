@@ -6,7 +6,7 @@
  *
  * Available variables:
  * - $iconlibrary: string of which icon library.
- * - $buttonname: HTML class name for the button (e.g. "twitter").
+ * - $buttonname: HTML class name for the button (e.g. "back30").
  * - $titletext: Text for the HTML title attribute.
  * - $awesomename: Font Awesome Icon name.
  * - $foundationname: Foundation Icon Set name.

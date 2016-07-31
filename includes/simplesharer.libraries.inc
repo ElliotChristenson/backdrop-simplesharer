@@ -48,7 +48,7 @@ function simplesharer_libraries_info() {
  *   returns whether icon library exists.
  */
 function simplesharer_library($library_name) {
-  if (($library=libraries_load($library_name)) && !empty($library['loaded'])) {
+  if (module_exists('libraries') && ($library = libraries_load($library_name)) && !empty($library['loaded'])) {
     return TRUE;
   }
   return FALSE;

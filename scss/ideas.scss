@@ -1,75 +1,51 @@
 /* Ideas By Elliot style */
 
-@import "./mixins.scss";
+@import "mixins";
 
-#block-simplesharer-simplesharer {
-  display: block;
-}
-
-#simplesharer .simplesharer-buttonlist {
+#simplesharer .simplesharer-button-itemlist {
   margin: 1em 0 0 0;
-  @include display-flex;
-  @include justify-content(space-between);
+  display:flex;
+  justify-content: space-between;
   list-style-type: none;
   li {
     margin: 0;
     padding: 0;
     a {
-      width: 6vw;
-      height: 5vw;
+      width: 4.5vw;
+      max-width: 108px;
+      min-width: 48px;
       text-align: center;
-      @include sassy-button("simple", 5px, 1.2vw, $base-color, false, $background-color, "raised", false);
-      @include sassy-button-structure(5px, 1.22vw, 0.4em);
       &:hover {
       }
       i {
-        font-size: 2.5vw;
+        font-size: 1.75vw;
         display: block;
+        padding: 0.5vw 0 0 0;
+      }
+      span {
+        font-size: 1vw;
       }
     }
-    &.simplesharer-facebook-button a:hover {
-      @include sassy-button-gradient("simple", $facebook-color, false, $background-color, "inset", false);
+    &.simplesharer-facebook-button-item a:hover {
+      @include gradient-background($facebook-color);
     }
-    &.simplesharer-twitter-button a:hover {
-      @include sassy-button-gradient("simple", $twitter-color, false, $background-color, "inset", false);
+    &.simplesharer-twitter-button-item a:hover {
+      @include gradient-background($twitter-color);
     }
-    &.simplesharer-pinterest-button a:hover {
-      @include sassy-button-gradient("simple", $pinterest-color, false, $background-color, "inset", false);
+    &.simplesharer-pinterest-button-item a:hover {
+      @include gradient-background($pinterest-color);
     }
-    &.simplesharer-linkedin-button a:hover {
-      @include sassy-button-gradient("simple", $linkedin-color, false, $background-color, "inset", false);
+    &.simplesharer-linkedin-button-item a:hover {
+      @include gradient-background($linkedin-color);
     }
-    &.simplesharer-tumblr-button a:hover {
-      @include sassy-button-gradient("simple", $tumblr-color, false, $background-color, "inset", false);
+    &.simplesharer-tumblr-button-item a:hover {
+      @include gradient-background($tumblr-color);
     }
-    &.simplesharer-email-button a:hover {
-      @include sassy-button-gradient("simple", #333333, false, $background-color, "inset", false);
+    &.simplesharer-reddit-button-item a:hover {
+      @include gradient-background($reddit-color);
     }
-  }
-}
-
-html.no-cssvwunit #simplesharer {
-  .simplesharer-buttonlist li {
-    height: 30px;
-    width: 50px;
-    a {
-      font-size: 10px;
-      width: 50px;
-      height: 30px;
-      i {
-        font-size: 15px;
-      }
-    }
-  }
-}
-
-html.no-flexbox #simplesharer {
-  display: table;
-  margin-top: 5px;
-  .simplesharer-buttonlist {
-    display: table-row;
-    li {
-      display: table-cell;
+    &.simplesharer-email-button-item a:hover {
+      @include gradient-background(#333333);
     }
   }
 }

@@ -1,12 +1,6 @@
 /* Ideas By Elliot style */
 /* Colors */
-/* line 5, ../scss/ideas.scss */
-#block-simplesharer-simplesharer {
-  display: block;
-}
-
-/* line 9, ../scss/ideas.scss */
-#simplesharer .simplesharer-buttonlist {
+#simplesharer .simplesharer-button-itemlist {
   margin: 1em 0 0 0;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16,138 +10,49 @@
   justify-content: space-between;
   list-style-type: none;
 }
-/* line 14, ../scss/ideas.scss */
-#simplesharer .simplesharer-buttonlist li {
+#simplesharer .simplesharer-button-itemlist li {
   margin: 0;
   padding: 0;
 }
-/* line 17, ../scss/ideas.scss */
-#simplesharer .simplesharer-buttonlist li a {
-  width: 5vw;
-  height: 4vw;
+#simplesharer .simplesharer-button-itemlist li a {
+  width: 4.5vw;
+  max-width: 108px;
+  min-width: 48px;
   text-align: center;
-  font-size: 1.2vw;
-  padding: 0.5em 1.5em;
-  display: inline-block;
-  cursor: pointer;
-  border-radius: 5px;
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFB25655', endColorstr='#FF6F3332');
-  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2IyNTY1NSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzkyNDM0MiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background: linear-gradient(#b25655, #924342);
-  box-shadow: #ca8a8a 0 1px 0 inset;
-  border: 1px solid #803b3a;
-  color: #ffffff;
-  text-shadow: #5a2929 0 1px 0;
-  font-size: 1.22vw;
-  padding: 0.4em;
-  display: inline-block;
-  cursor: pointer;
-  border-radius: 5px;
 }
-/* line 74, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/sassy-buttons-0.2.6/stylesheets/_sassy-buttons.sass */
-#simplesharer .simplesharer-buttonlist li a::-moz-focus-inner {
-  padding: 0 !important;
-  margin: -1px !important;
-}
-/* line 25, ../scss/ideas.scss */
-#simplesharer .simplesharer-buttonlist li a i {
-  font-size: 2.5vw;
+#simplesharer .simplesharer-button-itemlist li a i {
+  font-size: 1.75vw;
   display: block;
+  padding: 0.5vw 0 0 0;
 }
-/* line 30, ../scss/ideas.scss */
-#simplesharer .simplesharer-buttonlist li.simplesharer-facebook-button a:hover {
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF3B5998', endColorstr='#FF1E2E4F');
-  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzNiNTk5OCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzJkNDM3MyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background: linear-gradient(#3b5998, #2d4373);
-  box-shadow: #5f7ec1 0 1px 0 inset;
-  border: 1px solid #263961;
-  color: #ffffff;
-  text-shadow: #162138 0 -1px 0;
+#simplesharer .simplesharer-button-itemlist li a span {
+  font-size: 1vw;
 }
-/* line 33, ../scss/ideas.scss */
-#simplesharer .simplesharer-buttonlist li.simplesharer-twitter-button a:hover {
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF55ACCE', endColorstr='#FF2A7593');
-  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzU1YWNjZSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM2OTViYSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background: linear-gradient(#55acce, #3695ba);
-  box-shadow: #90c9df 0 1px 0 inset;
-  border: 1px solid #3085a7;
-  color: #ffffff;
-  text-shadow: #23627b 0 -1px 0;
+#simplesharer .simplesharer-button-itemlist li.simplesharer-facebook-button-item a:hover {
+  background: linear-gradient(to bottom, #5f7ec1 0%, #3b5998 40%, #263961 100%);
+  background-color: #3b5998;
 }
-/* line 36, ../scss/ideas.scss */
-#simplesharer .simplesharer-buttonlist li.simplesharer-pinterest-button a:hover {
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFCC2127', endColorstr='#FF741316');
-  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2NjMjEyNyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2EwMWExZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background: linear-gradient(#cc2127, #a01a1f);
-  box-shadow: #e4565b 0 1px 0 inset;
-  border: 1px solid #8a161a;
-  color: #ffffff;
-  text-shadow: #5a0f11 0 -1px 0;
+#simplesharer .simplesharer-button-itemlist li.simplesharer-twitter-button-item a:hover {
+  background: linear-gradient(to bottom, #90c9df 0%, #55acce 40%, #3085a7 100%);
+  background-color: #55acce;
 }
-/* line 39, ../scss/ideas.scss */
-#simplesharer .simplesharer-buttonlist li.simplesharer-linkedin-button a:hover {
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF00A0DC', endColorstr='#FF005676');
-  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwYTBkYyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwN2JhOSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background: linear-gradient(#00a0dc, #007ba9);
-  box-shadow: #2ac5ff 0 1px 0 inset;
-  border: 1px solid #006890;
-  color: #ffffff;
-  text-shadow: #004057 0 -1px 0;
+#simplesharer .simplesharer-button-itemlist li.simplesharer-pinterest-button-item a:hover {
+  background: linear-gradient(to bottom, #e4565b 0%, #cc2127 40%, #8a161a 100%);
+  background-color: #cc2127;
 }
-/* line 42, ../scss/ideas.scss */
-#simplesharer .simplesharer-buttonlist li.simplesharer-tumblr-button a:hover {
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF35465C', endColorstr='#FF10151B');
-  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzM1NDY1YyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzIyMmQzYyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background: linear-gradient(#35465c, #222d3c);
-  box-shadow: #516b8d 0 1px 0 inset;
-  border: 1px solid #19212b;
-  color: #ffffff;
-  text-shadow: #050608 0 -1px 0;
+#simplesharer .simplesharer-button-itemlist li.simplesharer-linkedin-button-item a:hover {
+  background: linear-gradient(to bottom, #2ac5ff 0%, #00a0dc 40%, #006890 100%);
+  background-color: #00a0dc;
 }
-/* line 45, ../scss/ideas.scss */
-#simplesharer .simplesharer-buttonlist li.simplesharer-email-button a:hover {
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF333333', endColorstr='#FF000000');
-  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzMzMzMzMyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFhMWExYSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background: linear-gradient(#333333, #1a1a1a);
-  box-shadow: #595959 0 1px 0 inset;
-  border: 1px solid #0d0d0d;
-  color: #ffffff;
-  text-shadow: black 0 -1px 0;
+#simplesharer .simplesharer-button-itemlist li.simplesharer-tumblr-button-item a:hover {
+  background: linear-gradient(to bottom, #516b8d 0%, #35465c 40%, #19212b 100%);
+  background-color: #35465c;
 }
-
-/* line 52, ../scss/ideas.scss */
-html.no-cssvwunit #simplesharer .simplesharer-buttonlist li {
-  height: 30px;
-  width: 50px;
+#simplesharer .simplesharer-button-itemlist li.simplesharer-reddit-button-item a:hover {
+  background: linear-gradient(to bottom, #ff7d4d 0%, #ff4500 40%, #b33000 100%);
+  background-color: #ff4500;
 }
-/* line 55, ../scss/ideas.scss */
-html.no-cssvwunit #simplesharer .simplesharer-buttonlist li a {
-  font-size: 10px;
-  width: 50px;
-  height: 30px;
-}
-/* line 59, ../scss/ideas.scss */
-html.no-cssvwunit #simplesharer .simplesharer-buttonlist li a i {
-  font-size: 15px;
-}
-
-/* line 66, ../scss/ideas.scss */
-html.no-flexbox #simplesharer {
-  display: table;
-  margin-top: 5px;
-}
-/* line 69, ../scss/ideas.scss */
-html.no-flexbox #simplesharer .simplesharer-buttonlist {
-  display: table-row;
-}
-/* line 71, ../scss/ideas.scss */
-html.no-flexbox #simplesharer .simplesharer-buttonlist li {
-  display: table-cell;
+#simplesharer .simplesharer-button-itemlist li.simplesharer-email-button-item a:hover {
+  background: linear-gradient(to bottom, #595959 0%, #333333 40%, #0d0d0d 100%);
+  background-color: #333333;
 }

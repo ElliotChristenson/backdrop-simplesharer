@@ -1,57 +1,11 @@
 /* Work As One style */
 /* Colors */
-@media only screen and (max-width: 739px) {
-  /* line 7, ../scss/workasone.scss */
-  .block-simplesharer h2.block-title {
-    font-size: 4vw;
-  }
-
-  /* line 10, ../scss/workasone.scss */
-  #simplesharer .simplesharer-buttonlist li a {
-    font-size: 4.5vw;
-    height: 6vw;
-    line-height: 6vw;
-    width: 6vw;
-  }
-  /* line 15, ../scss/workasone.scss */
-  #simplesharer .simplesharer-buttonlist li a i {
-    margin: 0;
-  }
-  /* line 18, ../scss/workasone.scss */
-  #simplesharer .simplesharer-buttonlist li a span {
-    display: none;
-  }
-}
-@media only screen and (min-width: 750px) {
-  /* line 25, ../scss/workasone.scss */
-  .block-simplesharer h2.block-title {
-    font-size: 2em;
-  }
-
-  /* line 28, ../scss/workasone.scss */
-  #simplesharer .simplesharer-buttonlist li a {
-    font-size: 1.5vw;
-    height: 2vw;
-    line-height: 2vw;
-    width: 8.5vw;
-  }
-  /* line 33, ../scss/workasone.scss */
-  #simplesharer .simplesharer-buttonlist li a i {
-    margin: 0;
-  }
-  /* line 36, ../scss/workasone.scss */
-  #simplesharer .simplesharer-buttonlist li a span {
-    display: inline;
-  }
-}
-/* line 41, ../scss/workasone.scss */
 .block-simplesharer h2.block-title {
-  color: #B25655;
+  font-size: 2em;
   text-align: center;
 }
 
-/* line 46, ../scss/workasone.scss */
-#simplesharer .simplesharer-buttonlist {
+#simplesharer .simplesharer-button-itemlist {
   margin: 1em 0 0 0;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -61,78 +15,40 @@
   justify-content: space-between;
   list-style-type: none;
 }
-/* line 51, ../scss/workasone.scss */
-#simplesharer .simplesharer-buttonlist li {
+#simplesharer .simplesharer-button-itemlist li {
   margin: 0;
   padding: 0;
 }
-/* line 54, ../scss/workasone.scss */
-#simplesharer .simplesharer-buttonlist li a {
+#simplesharer .simplesharer-button-itemlist li a {
   display: block;
+  width: 8.5vw;
+  height: 2vw;
   text-align: center;
-  background-color: #B25655;
+  font-size: 1.5vw;
+  line-height: 2vw;
   padding: 0.25em;
-  color: #ffffff;
 }
-/* line 60, ../scss/workasone.scss */
-#simplesharer .simplesharer-buttonlist li a:hover {
-  color: #ffffff;
+#simplesharer .simplesharer-button-itemlist li a i {
+  margin-right: 0.5em;
 }
-/* line 64, ../scss/workasone.scss */
-#simplesharer .simplesharer-buttonlist li.simplesharer-facebook-button-item a:hover {
-  background-color: #3b5998;
+#simplesharer .simplesharer-button-itemlist li.simplesharer-facebook-button-item a:hover {
+  background: #3b5998;
 }
-/* line 67, ../scss/workasone.scss */
-#simplesharer .simplesharer-buttonlist li.simplesharer-twitter-button-item a:hover {
-  background-color: #55acce;
+#simplesharer .simplesharer-button-itemlist li.simplesharer-twitter-button-item a:hover {
+  background: #55acce;
 }
-/* line 70, ../scss/workasone.scss */
-#simplesharer .simplesharer-buttonlist li.simplesharer-pinterest-button-item a:hover {
-  background-color: #cc2127;
+#simplesharer .simplesharer-button-itemlist li.simplesharer-pinterest-button-item a:hover {
+  background: #cc2127;
 }
-/* line 73, ../scss/workasone.scss */
-#simplesharer .simplesharer-buttonlist li.simplesharer-linkedin-button-item a:hover {
-  background-color: #00a0dc;
+#simplesharer .simplesharer-button-itemlist li.simplesharer-linkedin-button-item a:hover {
+  background: #00a0dc;
 }
-/* line 76, ../scss/workasone.scss */
-#simplesharer .simplesharer-buttonlist li.simplesharer-tumblr-button-item a:hover {
-  background-color: #35465c;
+#simplesharer .simplesharer-button-itemlist li.simplesharer-tumblr-button-item a:hover {
+  background: #35465c;
 }
-/* line 79, ../scss/workasone.scss */
-#simplesharer .simplesharer-buttonlist li.simplesharer-reddit-button-item a:hover {
-  background-color: #ff4500;
+#simplesharer .simplesharer-button-itemlist li.simplesharer-reddit-button-item a:hover {
+  background: #ff4500;
 }
-/* line 82, ../scss/workasone.scss */
-#simplesharer .simplesharer-buttonlist li.simplesharer-email-button-item a:hover {
-  background-color: #333333;
-}
-
-/* line 89, ../scss/workasone.scss */
-html.no-cssvwunit #simplesharer .simplesharer-buttonlist li {
-  height: 30px;
-  width: 50px;
-}
-/* line 92, ../scss/workasone.scss */
-html.no-cssvwunit #simplesharer .simplesharer-buttonlist li a {
-  font-size: 10px;
-  width: 50px;
-  height: 30px;
-}
-/* line 96, ../scss/workasone.scss */
-html.no-cssvwunit #simplesharer .simplesharer-buttonlist li a i {
-  font-size: 15px;
-}
-
-/* line 103, ../scss/workasone.scss */
-html.no-flexbox #simplesharer {
-  display: table;
-  margin-top: 5px;
-}
-/* line 106, ../scss/workasone.scss */
-html.no-flexbox #simplesharer .simplesharer-buttonlist {
-  display: table-row;
-}
-/* line 108, ../scss/workasone.scss */
-html.no-flexbox #simplesharer .simplesharer-buttonlist li {
-  display: table-cell;
+#simplesharer .simplesharer-button-itemlist li.simplesharer-email-button-item a:hover {
+  background: #333333;
 }

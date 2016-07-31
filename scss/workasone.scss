@@ -1,112 +1,52 @@
 /* Work As One style */
 
-@import "./mixins.scss";
+@import "mixins";
 
-@media only screen
-  and (max-width: 739px) {
-  .block-simplesharer h2.block-title {
-    font-size: 4vw;
-  }
-  #simplesharer .simplesharer-buttonlist li a {
-    font-size: 4.5vw;
-    height: 6vw;
-    line-height: 6vw;
-    width: 6vw;
-    i {
-      margin: 0;
-    }
-    span {
-      display: none;
-    }
-  }
-}
-@media only screen
-  and (min-width: 750px) {
-  .block-simplesharer h2.block-title {
-    font-size: 2em;
-  }
-  #simplesharer .simplesharer-buttonlist li a {
-    font-size: 1.5vw;
-    height: 2vw;
-    line-height: 2vw;
-    width: 8.5vw;
-    i {
-      margin: 0;
-    }
-    span {
-      display: inline;
-    }
-  }
-}
 .block-simplesharer h2.block-title {
-  color: $base-color;
+  font-size: 2em;
   text-align: center;
 }
 
-#simplesharer .simplesharer-buttonlist {
+#simplesharer .simplesharer-button-itemlist {
   margin: 1em 0 0 0;
-  @include display-flex;
-  @include justify-content(space-between);
+  display: flex;
+  justify-content: space-between;
   list-style-type: none;
   li {
     margin: 0;
     padding: 0;
     a {
       display: block;
+      width: 8.5vw;
+      height: 2vw;
       text-align: center;
-      background-color: $base-color;
+      font-size: 1.5vw;
+      line-height: 2vw;
       padding: 0.25em;
-      color: $background-color;
-      &:hover {
-        color: $background-color;
+      i {
+        margin-right: 0.5em;
       }
     }
     &.simplesharer-facebook-button-item a:hover {
-      background-color: $facebook-color;
+      background: $facebook-color;
     }
     &.simplesharer-twitter-button-item a:hover {
-      background-color: $twitter-color;
+      background: $twitter-color;
     }
     &.simplesharer-pinterest-button-item a:hover {
-      background-color: $pinterest-color;
+      background: $pinterest-color;
     }
     &.simplesharer-linkedin-button-item a:hover {
-      background-color: $linkedin-color;
+      background: $linkedin-color;
     }
     &.simplesharer-tumblr-button-item a:hover {
-      background-color: $tumblr-color;
+      background: $tumblr-color;
     }
     &.simplesharer-reddit-button-item a:hover {
-      background-color: $reddit-color;
+      background: $reddit-color;
     }
     &.simplesharer-email-button-item a:hover {
-      background-color: #333333;
-    }
-  }
-}
-
-html.no-cssvwunit #simplesharer {
-  .simplesharer-buttonlist li {
-    height: 30px;
-    width: 50px;
-    a {
-      font-size: 10px;
-      width: 50px;
-      height: 30px;
-      i {
-        font-size: 15px;
-      }
-    }
-  }
-}
-
-html.no-flexbox #simplesharer {
-  display: table;
-  margin-top: 5px;
-  .simplesharer-buttonlist {
-    display: table-row;
-    li {
-      display: table-cell;
+      background: #333333;
     }
   }
 }
